@@ -7,7 +7,7 @@ class Users(db.Model):
     generation_code = db.Column(db.String(500), nullable=True)
 
     def __repr__(self):
-        return f'<users {self.id}'
+        return f'<users> {self.id}'
 
 
 with app.app_context():
