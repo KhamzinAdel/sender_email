@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <h1>Registration</h1>
+</head>
+<style>
+
+  .button {
+    top:50%;
+    background-color:#0a0a23;
+    color: #fff;
+    border:1px solid black;
+    border-radius:10px;
+    padding:8px 16px;
+    min-height:30px;
+    min-width: 120px;
+    transition: border-radius 0.3s ease-in;
+  }
+
+button:hover {
+  background: #87cefa;
+}
+
+</style>
+<body>
+
+  <form method="POST">
+    <div class="field">
+
+    <p><strong>Login:</strong>
+      <input class="input" type="email" name="email" placeholder="Email"></p>
+
+      <p><strong>Password:</strong>
+         <input class="input" type="password" name="password" placeholder="Password"></p>
+
+    </div>
+    <div class="field">
+      <p class="control">
+        <button type="submit" class="button is-success">
+          <a>Enter</a>
+        </button>
+      </p>
+    </div>
+  </form>
+</body>
+</html>

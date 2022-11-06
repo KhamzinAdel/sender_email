@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Verify your account</title>
+  </head>
+  <body>
+    <h1 class="title">
+      Please verify your account
+    </h1>
+    <form method= "POST" action="/verifypage">
+      <div class="field">
+        <label class="label">Enter the code sent to your email:</label>
+          <input class="input" type="text" name= "verificationcode" placeholder="verificationcode">
+
+      </div>
+      <div class="field">
+        <p class="control">
+          <button type="submit" class="is-success" value = "submitcode">
+            Submit Verification Code
+              </button>
+
+
+        </p>
+      </div>
+    </form>
+  </body>
+</html>
