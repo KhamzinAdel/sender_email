@@ -10,5 +10,4 @@ class Users(db.Model):
         return f'<users> {self.id}'
 
 
-with app.app_context():
-    db.create_all()
+
