@@ -20,9 +20,9 @@ def index():
                 db.session.add(user)
                 db.session.flush()
                 db.session.commit()
-            except:
+            except Exception as e:
                 db.session.rollback()
-                print('Ошибка добавления в бд')
+                print('Ошибка добавления в бд', e)
 
             send(email_getter=email, gen_email_code=general_gen_code)
 
