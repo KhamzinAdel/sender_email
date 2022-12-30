@@ -2,9 +2,11 @@ from app import app, db
 from app.mail import send
 from app.models import Users
 from app.generation import gen_code
+from werkzeug.security import generate_password_hash, check_password_hash
+
 from validate_email import validate_email
 from flask import render_template, request, redirect, url_for
-from werkzeug.security import generate_password_hash, check_password_hash
+
 
 
 @app.route('/', methods=['GET', 'POST'])
