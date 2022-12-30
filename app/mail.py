@@ -14,4 +14,3 @@ def send(email_getter: str, gen_email_code: str):
         smtp_server.quit()
     except smtplib.SMTPException:
         return 'Problems with gmail'
-
