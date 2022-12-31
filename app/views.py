@@ -1,12 +1,11 @@
+from flask import render_template, request, redirect, url_for
+from werkzeug.security import generate_password_hash, check_password_hash
+
 from app import app, db
 from app.mail import send
 from app.models import Users
 from app.generation import gen_code
-from werkzeug.security import generate_password_hash, check_password_hash
-
 from validate_email import validate_email
-from flask import render_template, request, redirect, url_for
-
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -37,7 +36,7 @@ def index():
 def verifypage():
     if request.method == 'POST':
         verificationcode = request.form.get('verificationcode')
-        if check_password_hash(Users.query.all()[0].generation_code, verificationcode.strip()):
+        if check_password_hash(Users.query.filter(Users.email()).generation_code, verificationcode.strip()):
             return redirect(url_for('success'))
 
         return redirect(url_for('verifypage'))
