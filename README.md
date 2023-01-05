@@ -1,1 +1,3 @@
-![](https://github.com/Your_Repository_Name/Your_GIF_Name.gif)
+<div id="header" align="center">
+  <img src="https://i.gifer.com/embedded/download/Anm7.gif" width="100"/>
+</div>
