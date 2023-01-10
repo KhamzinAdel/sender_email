@@ -1,9 +1,8 @@
 import smtplib
 import os
-from dotenv import load_dotenv
+
 from app.message import html_generation
 
-load_dotenv()
 
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
